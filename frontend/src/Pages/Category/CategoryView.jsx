@@ -174,7 +174,7 @@ const CategoryView = () => {
           image={item.image}
           name={item.name}
           // data={item.data}
-          title=""
+          title={item.title}
           des=""
           parts=""
         />
