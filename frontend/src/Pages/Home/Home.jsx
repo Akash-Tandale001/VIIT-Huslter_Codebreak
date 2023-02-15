@@ -1,13 +1,14 @@
 import React from 'react'
+import Login from '../SignIn/pages/Login'
+import Signup from '../SignIn/pages/SignUp'
 
 const Home = () => {
   return (
-    <div>
-      <div>
-        hello
-      </div>
-    </div>
+    <>
+    <Login/>
+    <Signup/>
+    </>
   )
 }
 
-export default Home
+export default Home;
