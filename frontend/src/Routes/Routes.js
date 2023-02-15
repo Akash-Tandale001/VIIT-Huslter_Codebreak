@@ -5,6 +5,8 @@ const Signup = React.lazy(() => import("../Pages/SignIn/pages/SignupPage.js"));
 const Categories = React.lazy(() => import("../Pages/Category/Category.jsx"));
 const ResetPassword = React.lazy(() => import("../Pages/SignIn/Components/ResetPassword.js"));
 const CategoryView= React.lazy(()=>import("../Pages/Category/CategoryView.jsx"))
+const AboutUs= React.lazy(()=>import("../Components/Navbar/AboutUs"))
+
 
 const components = {
 	Home: {
