@@ -35,7 +35,7 @@ function NavBar() {
                 <div className='menu-icon' onClick={handleClick}>
                 <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
               </div>
-              /*<ul className={click ? 'nav-menu active' : 'nav-menu'}>
+              <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                 <li className='nav-item'>
                   <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                     Home
@@ -57,13 +57,16 @@ function NavBar() {
                     </Link>
                   </li>
                   <li className='nav-item'>
-                    <Link to='/sign-up' className='nav-links-mobile' onClick={closeMobileMenu}>
-                      Sign Up
+                    <Link to='/Signup' className='nav-links' onClick={closeMobileMenu}>
+                    {button && <Button buttonStyle='btn--outline'> SIGN  UP </Button>}
                     </Link>
                   </li>
-                </ul>
-                {button && <Button buttonStyle='btn--outline'> SIGN  UP </Button>}
-                
+                  <li className='nav-item'>
+                    <Link to='/Login' className='nav-links' onClick={closeMobileMenu}>
+                    {button && <Button buttonStyle='btn--outline'> LOGIN </Button>}
+                    </Link>
+                  </li>
+                </ul>                
             </div>
         </nav>
     </>
