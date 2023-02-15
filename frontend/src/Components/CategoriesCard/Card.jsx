@@ -23,7 +23,7 @@ const Card = ({ image, name ,data, text}) => {
           </figure>
           <div className="card-body">
             <h2 className="card-title text-center pt-4">{name}</h2>
-            <h3 className="card-text text-center pt-4  font-normal text-gray-600">{text}</h3>
+            <h3 className="card-text text-center pt-4 text-green-600  font-normal text-gray-600">{text}</h3>
           </div>
         </div>
       </Link>
