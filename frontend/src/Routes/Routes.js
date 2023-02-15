@@ -2,6 +2,7 @@ import React from 'react'
 const Home = React.lazy(() => import("../Pages/Home/Home.jsx"));
 const Login = React.lazy(() => import("../Pages/SignIn/pages/Login.js"));
 const Signup = React.lazy(() => import("../Pages/SignIn/pages/Signup.js"));
+const ResetPassword = React.lazy(() => import("../Pages/SignIn/Components/ResetPassword.js"));
 
 const components = {
 	Home: {
@@ -30,11 +31,11 @@ const components = {
 		element: <Login />,
 	},
 
-	// ResetPassword: {
-	// 	path: "/reset-password",
-	// 	name: "ResetPassword",
-	// 	element: <ResetPassword />,
-	// },
+	ResetPassword: {
+		path: "/ResetPassword",
+		name: "ResetPassword",
+		element: <ResetPassword />,
+	},
     // AdminDashBoard: {
 	// 	path: "/base/AdminDashBoard",
 	// 	name: "AdminDashBoard",
@@ -42,7 +43,7 @@ const components = {
 	// },
 	SignUp: {
 		path: "/signup",
-		name: "SignUp",
+		name: "Signup",
 		element: <Signup />,
 	},
 	// PaymentSucess:{
@@ -77,7 +78,7 @@ const BasicRoutesConfig = [
     components.Home,
 	// components.About,
 	components.Login,
-	// components.ResetPassword,
+	components.ResetPassword,
 	components.SignUp,
 ];
 export { rolesConfig, BasicRoutesConfig };
