@@ -40,7 +40,7 @@ function NavBar() {
         <nav className='navbar'>
             <div className='navbar-container'>
                 <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-                    VIIT-Hustler <i className='fab fa-typo3'/>  
+                    Ashok LeyLand <i className='fab fa-typo3'/>  
                 </Link>
                 <div className='menu-icon' onClick={handleClick}>
                 <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -62,7 +62,7 @@ function NavBar() {
                 }
                   
                   <li className='nav-item'>
-                    <Link to='#' className='nav-links' onClick={closeMobileMenu}>
+                    <Link to='/about' className='nav-links' onClick={closeMobileMenu}>
                     About Us
                     </Link>
                   </li>
