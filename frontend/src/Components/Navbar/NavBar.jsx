@@ -51,13 +51,18 @@ function NavBar() {
                     Home
                   </Link>
                 </li>
-                  <li className='nav-item'>
-                    <Link to='/Services' className='nav-links' onClick={closeMobileMenu}>
-                      AboutUs
+                {
+                  check!==null ? (
+                    <li className='nav-item'>
+                    <Link to='/base/categories' className='nav-links' onClick={closeMobileMenu}>
+                      Category
                     </Link>
                   </li>
+                  ):null
+                }
+                  
                   <li className='nav-item'>
-                    <Link to='/AboutUs' className='nav-links' onClick={closeMobileMenu}>
+                    <Link to='#' className='nav-links' onClick={closeMobileMenu}>
                     About Us
                     </Link>
                   </li>
