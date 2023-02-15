@@ -15,7 +15,7 @@ const Card = ({ image, name ,data, text}) => {
           state: { data:data },
         }}
       >
-        <div className="card w-32 bg-base-100  image-full cursor-pointer">
+        <div className="card w-full bg-base-100  image-full cursor-pointer">
           <figure className="flex justify-center">
             <img src={image} alt="#" className="w-14 items-center" />
           </figure>
