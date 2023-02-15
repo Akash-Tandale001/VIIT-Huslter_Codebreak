@@ -1,12 +1,16 @@
 import React from 'react'
 import HeroCarausel from '../../Components/HeroSection/HeroCarausel'
+import Login from '../SignIn/pages/Login'
+import Signup from '../SignIn/pages/SignUp'
 
 const Home = () => {
   return (
-    <div>
-      <HeroCarausel/>
-    </div>
+    <>
+    <HeroCarausel/>
+    <Login/>
+    <Signup/>
+    </>
   )
 }
 
-export default Home
+export default Home;
