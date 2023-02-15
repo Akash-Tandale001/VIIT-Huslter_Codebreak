@@ -64,4 +64,37 @@ const signupFields=[
     }
 ]
 
-export {loginFields,signupFields}
+const ResetPasswordFields=[
+    {
+        labelText:"Email address",
+        labelFor:"email-address",
+        id:"email-address",
+        name:"email",
+        type:"email",
+        autoComplete:"email",
+        isRequired:true,
+        placeholder:"Email address"   
+    },
+    {
+        labelText:"New Password",
+        labelFor:"new password",
+        id:"new password",
+        name:"new password",
+        type:"new password",
+        autoComplete:"current-password",
+        isRequired:true,
+        placeholder:"New Password"   
+    },
+    {
+        labelText:"Confirm Password",
+        labelFor:"confirm-password",
+        id:"confirm-password",
+        name:"confirm-password",
+        type:"password",
+        autoComplete:"confirm-password",
+        isRequired:true,
+        placeholder:"Confirm Password"   
+    }
+]
+
+export {loginFields,signupFields,ResetPasswordFields}
