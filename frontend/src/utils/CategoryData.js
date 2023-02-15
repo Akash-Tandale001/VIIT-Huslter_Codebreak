@@ -1,8 +1,9 @@
-
+  
 const CategoryData = [
   {
     image: "https://storage.googleapis.com/spares/spares/segment_icon/Body.png",
     name: "Body Parts ",
+    text: "Available at Closest stores",
     data: [
       {
         title: "BODY PARTS",

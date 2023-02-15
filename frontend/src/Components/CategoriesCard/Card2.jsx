@@ -20,7 +20,7 @@ const Card2 = ({image, name, data, title, des, parts}) => {
             <img src={image} alt="#" className="w-14 items-center" />
           </figure>
           <div className="card-body">
-            <h2 className="card-title text-center pt-4">{title}</h2>
+            <h2 className="card-title text-center pt-4">{name}</h2>
             <h3 className="card-text text-center pt-4  font-normal text-gray-600">{des}</h3>
           </div>
         </div>
