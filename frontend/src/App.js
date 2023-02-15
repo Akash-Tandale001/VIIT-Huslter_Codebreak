@@ -1,24 +1,57 @@
-import './App.css';
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
-import SignupPage from './Components/SignIn/pages/SignUp';
-import LoginPage from './Components/SignIn/pages/Login';
+import { BasicRoutesConfig, rolesConfig } from "./Routes/Routes";
+import React, { Suspense } from 'react'
+import { useDispatch, useSelector } from "react-redux";
+import { Routes, Route, Navigate } from "react-router-dom";
+import Loader from "./helper/Loader";
+import Home from "./Pages/Home/Home";
+import { ADMIN, USER } from "./utils/Constant";
+import { saveAuth } from "./Reducer/authSlice";
+
 
 function App() {
+  const { isAuthenticated, userRole,token } = useSelector(state => state.authDetails);
+  console.log("App",{ isAuthenticated, userRole,token })
+  const loginToken = sessionStorage.getItem("loginToken") && sessionStorage.getItem("isAuthenticated") && sessionStorage.getItem("userRole")
+  const dispatch = useDispatch;
+  const storeDetails =async()=>{
+    await dispatch(
+      saveAuth({
+        isAuthenticated : sessionStorage.getItem("loginToken"),
+        userRole : sessionStorage.getItem("userRole"),
+        token : sessionStorage.getItem("loginToken")
+      })
+    );
+  }
+  if(loginToken){  
+    storeDetails();
+  }
+  let routes;
+  if (isAuthenticated || sessionStorage.getItem("isAuthenticated")) {
+    if (userRole === USER || sessionStorage.getItem("userRole") === USER) {
+      routes = rolesConfig["user"];
+    } else if (userRole === ADMIN) {
+      routes = rolesConfig["Admin"];
+    }
+  }
   return (
-    <div className="min-h-full h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-    <div className="max-w-md w-full space-y-8">
-     <BrowserRouter>
-        <Routes>
-            <Route path="/" element={<LoginPage/>} />
-            <Route path="/signup" element={<SignupPage/>} />
-        </Routes>
-      </BrowserRouter>
-    </div>
-  </div>
+    <Suspense fallback={<Loader />}>
+      <Routes>
+        {BasicRoutesConfig.map((route, key) => {
+          console.log(route)
+          return route ? <Route key={key} {...route} /> : null;
+        })}
+
+        {isAuthenticated || loginToken ? (
+          <Route element={<Home/>}>
+            {routes.routes.map((route, key) => {
+              return route ? <Route key={key} {...route} /> : null;
+            })}
+          </Route>
+        ) : (
+          <Route path="/base/*" element={<Navigate to="/" replace />} />
+        )}
+      </Routes>
+    </Suspense>
   );
 }
 
