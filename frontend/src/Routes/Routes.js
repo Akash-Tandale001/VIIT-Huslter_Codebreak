@@ -1,6 +1,7 @@
 import React from 'react'
 const Home = React.lazy(() => import("../Pages/Home/Home.jsx"));
 const Login = React.lazy(() => import("../Pages/SignIn/pages/Login.js"));
+const Signup = React.lazy(() => import("../Pages/SignIn/pages/Signup.js"));
 
 const components = {
 	Home: {
@@ -39,11 +40,11 @@ const components = {
 	// 	name: "AdminDashBoard",
 	// 	element: <AdminDashBoard />,
 	// },
-	// SignUp: {
-	// 	path: "/signUp",
-	// 	name: "SignUp",
-	// 	element: <SignUp />,
-	// },
+	SignUp: {
+		path: "/signup",
+		name: "SignUp",
+		element: <Signup />,
+	},
 	// PaymentSucess:{
 	// 	path: "/base/checkout-sucess",
 	// 	name: "sucess",
@@ -77,6 +78,6 @@ const BasicRoutesConfig = [
 	// components.About,
 	components.Login,
 	// components.ResetPassword,
-	// components.SignUp,
+	components.SignUp,
 ];
 export { rolesConfig, BasicRoutesConfig };
