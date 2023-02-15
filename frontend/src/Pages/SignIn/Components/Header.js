@@ -11,10 +11,10 @@ export default function Header({
             <div className="flex justify-center">
                 <img 
                     alt=""
-                    className="h-14 w-14"
-                    src="https://ik.imagekit.io/pibjyepn7p9/Lilac_Navy_Simple_Line_Business_Logo_CGktk8RHK.png?ik-sdk-version=javascript-1.4.3&updatedAt=1649962071315"/>
+                    className="h-30 w-30"
+                    src="https://whoowner.b-cdn.net/wp-content/uploads/2018/01/Owner-of-Ashok-Leyland-Ltd-Wiki-Logo-profile-1024x591.jpg"/>
             </div>
-            <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+            <h2 className="mt-6 text-center text-9xl font-extrabold text-gray-2000">
                 {heading}
             </h2>
             <p className="mt-2 text-center text-sm text-gray-600 mt-5">
