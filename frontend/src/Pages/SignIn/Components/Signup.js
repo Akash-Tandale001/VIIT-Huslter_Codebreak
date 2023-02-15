@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
+import Loader from '../../../helper/Loader';
 import { signupFields } from "../Constants/formFields"
 import FormAction from "./FormAction";
 import Input from "./Input";
@@ -45,6 +46,9 @@ export default function Signup(){
   }
 
     return(
+      <>
+      {loading ? <Loader/> : null}
+      
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
         <div className="">
         {
@@ -70,5 +74,6 @@ export default function Signup(){
          
 
       </form>
+      </>
     )
 }

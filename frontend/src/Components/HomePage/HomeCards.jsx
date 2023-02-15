@@ -5,7 +5,7 @@ import './HomeCard.css'
 function HomeCards() {
     return (
       <div className='cards'>
-        <h1>Pick the nearest destinations!</h1>
+        <h1>Koi Manzil Dur Nahi!!</h1>
         <div className='cards__container'>
           <div className='cards__wrapper'>
             <ul className='cards__items'>
