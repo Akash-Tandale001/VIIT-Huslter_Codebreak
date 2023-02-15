@@ -3,6 +3,71 @@ const CategoryData = [
     image: "https://storage.googleapis.com/spares/spares/segment_icon/Body.png",
     name: "Body Parts ",
     text: "Available at Closest stores",
+    name: "Body Parts",
+    data: [
+      {
+        title: "BODY PARTS",
+        des: "The Car Body Parts work by forming a car's structural frame or exoskeleton while enhancing its safety and functionality.",
+        partes: [
+          {
+            title: "MIRROR",
+            data: [
+              {
+                image:
+                  "https://storage.googleapis.com/spares/new_images/Sub%20Categories%20Icons%20Jan4/Side%20View%20Mirror%20Cover.png",
+                name: "Side View Mirror Cover",
+              },
+              {
+                image:
+                  "https://storage.googleapis.com/spares/new_images/Sub%20Categories%20Icons%20Jan4/Inner%20Rear%20View%20Mirror.png",
+                name: "Inner Rear View Mirror",
+              },
+              {
+                image:
+                  "https://storage.googleapis.com/spares/new_images/Sub%20Categories%20Icons%20Jan4/Mirror%20Trim.png",
+                name: "Mirror Trim",
+              },
+              {
+                image:
+                  "https://storage.googleapis.com/spares/new_images/Sub%20Categories%20Icons%20Jan4/Side%20View%20Mirror.png",
+                name: "Side View Mirror",
+              },
+              {
+                image:
+                  "https://storage.googleapis.com/spares/new_images/Sub%20Categories%20Icons%20Jan4/Mirror%20Actuator.png",
+                name: "Mirror Actuator",
+              },
+            ],
+          },
+          {
+            title:"BUMPER",
+            des:"The Bumper protects the car's engine during a collision.",
+            partes:[
+                {
+                    image:"https://storage.googleapis.com/spares/new_images/Sub%20Categories%20Icons%20Jan4/Front%20Bumper.png",
+                    name:"Front Bumper"
+                },
+                {
+                    image:"https://storage.googleapis.com/spares/new_images/Sub%20Categories%20Icons%20Jan4/Rear%20Bumper.png",
+                    name:"Rear Bumper"
+                },
+                {
+                    image:"",
+                    name:""
+                },
+                {
+                    image:"",
+                    name:""
+                },
+                {
+                    image:"",
+                    name:""
+                },
+            ]
+          }
+        ]
+      },
+    ],
   },
   {
     image:

@@ -5,6 +5,7 @@ const Signup = React.lazy(() => import("../Pages/SignIn/pages/Signup.js"));
 const Categories = React.lazy(() => import("../Pages/Category/Category"));
 const BodyParts = React.lazy(() => import("../Pages/Category/BodyParts"));
 const ResetPassword = React.lazy(() => import("../Pages/SignIn/Components/ResetPassword.js"));
+const CategoryView= React.lazy(()=>import("../Pages/Category/CategoryView.jsx"))
 
 const components = {
 	Home: {
@@ -18,14 +19,14 @@ const components = {
 	// 	element: <About />,
 	// },
 	Categories: {
-		path: "/base/categories/*",
+		path: "/base/categories",
 		name: "categories",
 		element: <Categories />,
 	},
-	BodyParts: {
-		path: "/base/BodyParts/*",
-		name: "BodyParts",
-		element: <BodyParts />,
+    CategoriesView: {
+		path: "/base/categories/view/*",
+		name: "CategoriesView",
+		element: <CategoryView />,
 	},
 	// Cart: {
 	// 	path: "/base/cart",
@@ -88,6 +89,6 @@ const BasicRoutesConfig = [
 	components.ResetPassword,
 	components.SignUp,
     components.Categories,
-	components.BodyParts,
+    components.CategoriesView
 ];
 export { rolesConfig, BasicRoutesConfig };
