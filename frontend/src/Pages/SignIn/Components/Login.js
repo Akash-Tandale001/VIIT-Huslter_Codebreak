@@ -7,6 +7,7 @@ import Input from "./Input";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { authDetails, saveAuth } from "../../../Reducer/authSlice";
+import Loader from '../../../helper/Loader';
 const fields=loginFields;
 let fieldsState = {};
 fields.forEach(field=>fieldsState[field.id]='');
@@ -54,6 +55,9 @@ export default function Login(){
     }
 
     return(
+        <>
+        {loading ? <Loader/> : null}
+        
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
         <div className="-space-y-px">
             {
@@ -79,5 +83,6 @@ export default function Login(){
         <FormAction  text="Login"/>
 
       </form>
+      </>
     )
 }
