@@ -5,13 +5,15 @@ import { Link } from "react-router-dom";
 const Card = ({ image, name ,data, text}) => {
   const navigate = useNavigate();
   const onClick = () => {
-    navigate(`view/${name.replace(/\s+/g, "")}`);
+    if(text==="Available at Closest stores"){
+      navigate(`view/${name.replace(/\s+/g, "")}`);
+    }
   };
   return (
     <div className='shadow-lg rounded-lg '>
       <Link
         to={{
-          pathname: `view/${name.replace(/\s+/g, "")}`,
+          pathname: text==="Available at Closest stores" ? `view/${name.replace(/\s+/g, "")}`:``,
           state: { data:data },
         }}
       >
