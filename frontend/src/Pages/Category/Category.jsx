@@ -8,7 +8,7 @@ const Category = () => {
       <div>
         <div className="grid grid-cols-5 gap-2 p-8 gap-y-8">
           {CategoryData.map((item, index) => {
-            return <Card key={index} image={item.image} name={item.name} />;
+            return <Card key={index} image={item.image} name={item.name} data={item.data}/>;
           })}
         </div>
       </div>
