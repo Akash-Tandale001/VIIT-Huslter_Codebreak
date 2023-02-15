@@ -47,13 +47,13 @@ function NavBar() {
                     </Link>
                   </li>
                   <li className='nav-item'>
-                    <Link to='/Products' className='nav-links' onClick={closeMobileMenu}>
-                      Products
+                    <Link to='/AboutUs' className='nav-links' onClick={closeMobileMenu}>
+                    About Us
                     </Link>
                   </li>
                   <li className='nav-item'>
-                    <Link to='/Pro2' className='nav-links' onClick={closeMobileMenu}>
-                      Pro2
+                    <Link to='/Contacts' className='nav-links' onClick={closeMobileMenu}>
+                      Contact
                     </Link>
                   </li>
                   <li className='nav-item'>
