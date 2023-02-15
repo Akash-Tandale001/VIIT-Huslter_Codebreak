@@ -1,24 +1,57 @@
-import logo from './logo.svg';
-import './App.css';
+import { BasicRoutesConfig, rolesConfig } from "./Routes/Routes";
+import React, { Suspense } from 'react'
+import { useDispatch, useSelector } from "react-redux";
+import { Routes, Route, Navigate } from "react-router-dom";
+import Loader from "./helper/Loader";
+import Home from "./Pages/Home/Home";
+import { ADMIN, USER } from "./utils/Constant";
+import { saveAuth } from "./Reducer/authSlice";
+
 
 function App() {
+  const { isAuthenticated, userRole,token } = useSelector(state => state.authDetails);
+  console.log("App",{ isAuthenticated, userRole,token })
+  const loginToken = sessionStorage.getItem("loginToken") && sessionStorage.getItem("isAuthenticated") && sessionStorage.getItem("userRole")
+  const dispatch = useDispatch;
+  const storeDetails =async()=>{
+    await dispatch(
+      saveAuth({
+        isAuthenticated : sessionStorage.getItem("loginToken"),
+        userRole : sessionStorage.getItem("userRole"),
+        token : sessionStorage.getItem("loginToken")
+      })
+    );
+  }
+  if(loginToken){  
+    storeDetails();
+  }
+  let routes;
+  if (isAuthenticated || sessionStorage.getItem("isAuthenticated")) {
+    if (userRole === USER || sessionStorage.getItem("userRole") === USER) {
+      routes = rolesConfig["user"];
+    } else if (userRole === ADMIN) {
+      routes = rolesConfig["Admin"];
+    }
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense fallback={<Loader />}>
+      <Routes>
+        {BasicRoutesConfig.map((route, key) => {
+          console.log(route)
+          return route ? <Route key={key} {...route} /> : null;
+        })}
+
+        {isAuthenticated || loginToken ? (
+          <Route element={<Home/>}>
+            {routes.routes.map((route, key) => {
+              return route ? <Route key={key} {...route} /> : null;
+            })}
+          </Route>
+        ) : (
+          <Route path="/base/*" element={<Navigate to="/" replace />} />
+        )}
+      </Routes>
+    </Suspense>
   );
 }
 
