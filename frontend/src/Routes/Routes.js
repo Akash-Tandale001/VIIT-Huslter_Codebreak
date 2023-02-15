@@ -3,7 +3,6 @@ const Home = React.lazy(() => import("../Pages/Home/Home.jsx"));
 const Login = React.lazy(() => import("../Pages/SignIn/pages/Login.js"));
 const Signup = React.lazy(() => import("../Pages/SignIn/pages/Signup.js"));
 const Categories = React.lazy(() => import("../Pages/Category/Category"));
-const BodyParts = React.lazy(() => import("../Pages/Category/BodyParts"));
 const ResetPassword = React.lazy(() => import("../Pages/SignIn/Components/ResetPassword.js"));
 const CategoryView= React.lazy(()=>import("../Pages/Category/CategoryView.jsx"))
 
