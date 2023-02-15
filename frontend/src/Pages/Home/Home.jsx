@@ -1,11 +1,10 @@
 import React from 'react'
+import HeroCarausel from '../../Components/HeroSection/HeroCarausel'
 
 const Home = () => {
   return (
     <div>
-      <div>
-        hello
-      </div>
+      <HeroCarausel/>
     </div>
   )
 }
