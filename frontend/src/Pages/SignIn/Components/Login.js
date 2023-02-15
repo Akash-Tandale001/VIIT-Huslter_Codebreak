@@ -33,16 +33,13 @@ export default function Login(){
             setLoading(true);
             const loginstatus = await axios.post(
               "https://viit-huslter-codebreak.vercel.app/api/auth/login",
-              {
-                userName: "demo",
-                password: "demo",
-              }
+              loginState
             );
       
             await dispatch(
               saveAuth({
                 isAuthenticated: true,
-                userRole: loginstatus.data.userType,
+                userRole: "User",
                 token: loginstatus.data.token,
               })
             );

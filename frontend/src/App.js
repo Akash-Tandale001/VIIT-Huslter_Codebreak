@@ -33,7 +33,7 @@ function App() {
   let routes;
   if (isAuthenticated || sessionStorage.getItem("isAuthenticated")) {
     if (userRole === USER || sessionStorage.getItem("userRole") === USER) {
-      routes = rolesConfig["user"];
+      routes = rolesConfig["User"];
     } else if (userRole === ADMIN) {
       routes = rolesConfig["Admin"];
     }
@@ -47,7 +47,7 @@ function App() {
           })}
         </Route>
 
-        {isAuthenticated || loginToken ? (
+        {/* {isAuthenticated || loginToken ? (
           <Route element={<Layout />}>
             {routes.routes.map((route, key) => {
               return route ? <Route key={key} {...route} /> : null;
@@ -55,7 +55,7 @@ function App() {
           </Route>
         ) : (
           <Route path="/base/*" element={<Navigate to="/" replace />} />
-        )}
+        )} */}
       </Routes>
     </Suspense>
   );

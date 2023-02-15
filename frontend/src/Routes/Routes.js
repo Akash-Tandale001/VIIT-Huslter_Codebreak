@@ -71,7 +71,7 @@ const rolesConfig = {
             // components.AdminDashBoard,
 		],
 	},
-	user: {
+	User: {
 		routes: [
             components.Home,
 			// components.About,
@@ -79,6 +79,11 @@ const rolesConfig = {
             // components.Cart,
 			// components.PaymentFail,
 			// components.PaymentSucess,
+			components.Login,
+	components.ResetPassword,
+	components.SignUp,
+    components.Categories,
+    components.CategoriesView
         ],
 	},
 };
