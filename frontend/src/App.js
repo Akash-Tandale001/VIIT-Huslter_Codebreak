@@ -6,6 +6,7 @@ import Loader from "./helper/Loader";
 import Home from "./Pages/Home/Home";
 import { ADMIN, USER } from "./utils/Constant";
 import { saveAuth } from "./Reducer/authSlice";
+import Layout from "./Components/layout/Layout"
 
 
 function App() {
@@ -42,7 +43,7 @@ function App() {
         })}
 
         {isAuthenticated || loginToken ? (
-          <Route element={<Home/>}>
+          <Route element={loginToken ? <Layout/> : <Home/>}>
             {routes.routes.map((route, key) => {
               return route ? <Route key={key} {...route} /> : null;
             })}
