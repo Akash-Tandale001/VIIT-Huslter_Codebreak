@@ -4,11 +4,11 @@ import CategoryData from "../../utils/CategoryData";
 const Category = () => {
   return (
     <div>
-      <p className="italic drop-shadow-2xl font-bold pt-2" style={{fontSize:"2em",textAlign:"center"}}>Select Categories</p>
-      <div>
-        <div className="grid grid-cols-5 gap-2 p-8 gap-y-8">
+      <p className="italic drop-shadow-2xl font-bold pt-2 " style={{fontSize:"2em",textAlign:"center"}}>Select Categories</p>
+      <div className='shadow-lg rounded-lg'>
+        <div className="grid lg:grid-cols-5 gap-3 p-8 gap-y-12">
           {CategoryData.map((item, index) => {
-            return <Card key={index} image={item.image} name={item.name} />;
+            return <Card key={index} image={item.image} name={item.name} text={item.text}/>;
           })}
         </div>
       </div>
