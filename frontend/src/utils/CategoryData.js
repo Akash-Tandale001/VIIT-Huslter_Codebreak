@@ -1,15 +1,14 @@
-
+  
 const CategoryData = [
   {
     image: "https://storage.googleapis.com/spares/spares/segment_icon/Body.png",
     name: "Body Parts ",
     text: "Available at Closest stores",
-    name: "Body Parts",
     data: [
       {
         title: "BODY PARTS",
         des: "The Car Body Parts work by forming a car's structural frame or exoskeleton while enhancing its safety and functionality.",
-        partes: [
+        parts: [
           {
             title: "MIRROR",
             data: [
@@ -43,7 +42,7 @@ const CategoryData = [
           {
             title:"BUMPER",
             des:"The Bumper protects the car's engine during a collision.",
-            partes:[
+            parts:[
                 {
                     image:"https://storage.googleapis.com/spares/new_images/Sub%20Categories%20Icons%20Jan4/Front%20Bumper.png",
                     name:"Front Bumper"
@@ -73,7 +72,7 @@ const CategoryData = [
           {
             title:"LOCK SYSTEM",
             des:"A Lock System allows locking/unlocking the doors using a key or remote control.",
-            partes:[
+            parts:[
                 {
                     image:"https://storage.googleapis.com/spares/new_images/Sub%20Categories%20Icons%20Jan4/Door%20Lock%20Knob.png",
                     name:"Door Lock Knob"
@@ -88,7 +87,7 @@ const CategoryData = [
           {
             title:"FENDER",
             des:"A Car Fender prevents the projection of dust and debris into the air by the rotating tyre.",
-            partes:[
+            parts:[
                 {
                     image:"https://storage.googleapis.com/spares/new_images/Sub%20Categories%20Icons%20Jan4/Fender%20Trim.png",
                     name:"Fender Trim"
@@ -107,7 +106,7 @@ const CategoryData = [
           {
             title:"FENDER LINING",
             des:"A Fender Lining helps protect the car wiring and other components inside the wheel well from corrosion and rust.",
-            partes:[
+            parts:[
                 {
                     image:"https://storage.googleapis.com/spares/new_images/Sub%20Categories%20Icons%20Jan4/Fender%20Lining.png",
                     name:"Fender Lining"
@@ -117,7 +116,7 @@ const CategoryData = [
           {
             title:"BONNET",
             des:"Bonnet is the front part of the car which covers the engine.",
-            partes:[
+            parts:[
                 {
                     image:"https://storage.googleapis.com/spares/new_images/Sub%20Categories%20Icons%20Jan4/Bonnet%20Trim.png",
                     name:"Bonnet Trim"
@@ -155,7 +154,7 @@ const CategoryData = [
           {
             title:"DOOR COMPONENTS",
             des:"A Car Door is a door opening built to enter and exit from a car.",
-            partes:[
+            parts:[
                 {
                     image:"https://storage.googleapis.com/spares/new_images/Sub%20Categories%20Icons%20Jan4/Door.png",
                     name:"Door"
@@ -221,7 +220,7 @@ const CategoryData = [
           {
             title:"PANELS",
             des:"Car Body Panels are diligently built sturdy sections that act as a mount and cover for different car parts",
-            partes:[
+            parts:[
                 {
                     image:"https://storage.googleapis.com/spares/new_images/Sub%20Categories%20Icons%20Jan4/Front%20Body%20Panel.png",
                     name:"Front Body Panel"
@@ -263,7 +262,7 @@ const CategoryData = [
           {
             title:"BOOT",
             des:"A Car Boot is located at the back of a car and is used for keeping luggage and other items.",
-            partes:[
+            parts:[
                 {
                     image:"https://storage.googleapis.com/spares/new_images/Sub%20Categories%20Icons%20Jan4/Boot%20Lock.png",
                     name:"Boot Lock"
@@ -289,7 +288,7 @@ const CategoryData = [
           {
             title:"ROOF",
             des:"A Car Roof is a part that covers the car from the top to protect the passengers from wind, rain, heat, and other external elements.",
-            partes:[
+            parts:[
                 {
                     image:"https://storage.googleapis.com/spares/new_images/Sub%20Categories%20Icons%20Jan4/Sunroof.png",
                     name:"Sunroof"
@@ -315,7 +314,7 @@ const CategoryData = [
           {
             title:"TRIMS",
             des:"Car Trims are the parts of a car that add more to the appearance than functionality.",
-            partes:[
+            parts:[
                 {
                     image:"https://storage.googleapis.com/spares/new_images/Sub%20Categories%20Icons%20Jan4/Side%20Body%20Trim.png",
                     name:"Side Body Trim"
@@ -341,7 +340,7 @@ const CategoryData = [
           {
             title:"SUPPORT FRAME & MOUNTING",
             des:"Support Frame and Mounting are essential automobile parts that keep each component affixed securely.",
-            partes:[
+            parts:[
                 {
                     image:"https://storage.googleapis.com/spares/new_images/Sub%20Categories%20Icons%20Jan4/Radiator%20Support%20Frame.png",
                     name:"Radiator Support Frame"
@@ -367,7 +366,7 @@ const CategoryData = [
           {
             title:"CENTRAL LOCKING SYSTEM",
             des:"A Central Locking System works by locking/unlocking all the doors simultaneously using a key or a remote.",
-            partes:[
+            parts:[
                 {
                     image:"https://storage.googleapis.com/spares/new_images/Sub%20Categories%20Icons%20Jan4/Central%20Locking%20System.png",
                     name:"Central Locking System"
@@ -377,7 +376,7 @@ const CategoryData = [
           {
             title:"WINDOW GLASS",
             des:"Window Glass in a car provides visibility and adds the functionality of opening and closing a window.",
-            partes:[
+            parts:[
                 {
                     image:"https://storage.googleapis.com/spares/new_images/Sub%20Categories%20Icons%20Jan4/Quarter%20Glass.png",
                     name:"Quarter Glass"
@@ -404,7 +403,7 @@ const CategoryData = [
       {
         title:"Lighting",
         des:"Lights in cars help illuminate the darkened roadway, and each light serves different purposes like the fog light allows us to see through fog/smog.",
-        partes: [
+        parts: [
           {
             title: "Headlight",
             data: [
@@ -435,7 +434,7 @@ const CategoryData = [
     name: "Suspension",
     text: "Available at Closest stores",
     data: "The Suspension is responsible for maintaining a smooth grip of the tyres on the road. It maximizes the friction for a stable, controlled, and efficient driving experience.",
-    partes: [
+    parts: [
        {
         title: "Shock Absorber",
         data: [
@@ -460,7 +459,7 @@ const CategoryData = [
     name: "Air Conditioning",
     text: "Available at Closest stores",
     data: "A car AC maintains the ambient temperature inside the car also reducing humidity while making the drive pleasurable and comfortable for you.",
-    partes: [
+    parts: [
        {
         title: "Shock EVAPORATOR",
         data: [
@@ -486,7 +485,7 @@ const CategoryData = [
     name: "Brake System",
     text: "Available at Closest stores",
     data: "A Brake is a mechanical device that inhibits the car's motion by absorbing its energy and counteracting it with a frictional force.",
-    partes: [
+    parts: [
        {
         title: "BRAKE PAD",
         data: [
@@ -512,7 +511,7 @@ const CategoryData = [
     name: "Engine Parts",
     text: "Available at Closest stores",
     data: "In the Engine, the combustion of fuel and air mixture takes place and the energy produced from combustion is converted into motion.",
-    partes: [
+    parts: [
        {
         title: "PISTON",
         data: [
@@ -538,7 +537,7 @@ const CategoryData = [
     name: "Electrical",
     text: "Available at Closest stores",
     data: "Electrical components cater to various electrical needs of a car such as battery, alternator, horn, indicator, sensor etc. All of these help improve a car's functionality.",
-    partes: [
+    parts: [
        {
         title: "HORN",
         data: [
@@ -564,7 +563,7 @@ const CategoryData = [
     name: "Steering",
     text: "Available at Closest stores",
     data: "Steering system controls the tyre's movement. It works by converting the rotation of the steering wheel into the swivelling movement of the tyres",
-    partes: [
+    parts: [
        {
         title: "ShTIE ROD END",
         data: [
@@ -589,7 +588,7 @@ const CategoryData = [
       "https://storage.googleapis.com/spares/spares/segment_icon/Belt-&-Chain-Drive.png",
     name: "Belt & Chain Drive",
     data: "A Belt and Chain drive comprises some vital automobile components that transmit power using different means of efficient power transmission.",
-    partes: [
+    parts: [
        {
         title: "TIMING BELT/CHAIN",
         data: [
@@ -614,7 +613,7 @@ const CategoryData = [
       "https://storage.googleapis.com/spares/spares/segment_icon/Wheels.png",
     name: "Wheels & Tyre",
     data: "Wheels are the ones on which the car runs. The wheels system consists of many components but tyres are primarily the most important part of this system.",
-    partes: [
+    parts: [
        {
         title: "WHEEL BEARING",
         data: [
@@ -639,7 +638,7 @@ const CategoryData = [
       "https://storage.googleapis.com/spares/segment_icons/Lubrication_Hydraulics.png",
     name: "Oils & Fluids",
     data: "The Hydraulic system functions by using pressurised fluids to power various components while reducing heat, corrosion and friction between mechanical parts of a car.",
-    partes: [
+    parts: [
        {
         title: "ENGINE OIL",
         data: [
@@ -664,7 +663,7 @@ const CategoryData = [
       "https://storage.googleapis.com/spares/spares/segment_icon/Windshield.png",
     name: "Windscreen Cleaning System",
     data: "Windscreen is a glass screen above the bonnet that prevents car interiors from dust, debris, bugs, stones and any other contaminant suspended in the air.",
-    partes: [
+    parts: [
        {
         title: "SWIPER COMPONENTS",
         data: [
@@ -689,7 +688,7 @@ const CategoryData = [
       "https://storage.googleapis.com/spares/spares/segment_icon/Clutch.png",
     name: "Clutch System",
     data: "The primary function of the Clutch System is to transmit torque and power from engine to transmission. It controls the connection between the engine and the wheels.",
-    partes: [
+    parts: [
        {
         title: "CLUTCH FRICTION DISC",
         data: [
@@ -714,7 +713,7 @@ const CategoryData = [
       "https://storage.googleapis.com/spares/spares/segment_icon/Transmission.png",
     name: "Transmission",
     data: "The Suspension is responsible for maintaining a smooth grip of the tyres on the road. It maximizes the friction for a stable, controlled, and efficient driving experience.",
-    partes: [
+    parts: [
        {
         title: "Shock Absorber",
         data: [
@@ -739,7 +738,7 @@ const CategoryData = [
       "https://storage.googleapis.com/spares/spares/segment_icon/Filters.png",
     name: "Filters",
     data: "The Suspension is responsible for maintaining a smooth grip of the tyres on the road. It maximizes the friction for a stable, controlled, and efficient driving experience.",
-    partes: [
+    parts: [
        {
         title: "Shock Absorber",
         data: [
@@ -764,7 +763,7 @@ const CategoryData = [
       "https://storage.googleapis.com/spares/spares/segment_icon/Seal_Gasket.png",
     name: "Gasket & Seals",
     data: "The Suspension is responsible for maintaining a smooth grip of the tyres on the road. It maximizes the friction for a stable, controlled, and efficient driving experience.",
-    partes: [
+    parts: [
        {
         title: "Shock Absorber",
         data: [
@@ -789,7 +788,7 @@ const CategoryData = [
       "https://storage.googleapis.com/spares/spares/segment_icon/Engine-Cooling.png",
     name: "Cooling System",
     data: "The Suspension is responsible for maintaining a smooth grip of the tyres on the road. It maximizes the friction for a stable, controlled, and efficient driving experience.",
-    partes: [
+    parts: [
        {
         title: "Shock Absorber",
         data: [
@@ -814,7 +813,7 @@ const CategoryData = [
       "https://storage.googleapis.com/spares/spares/segment_icon/Exhaust%20System.png",
     name: "Exhaust System",
     data: "The Suspension is responsible for maintaining a smooth grip of the tyres on the road. It maximizes the friction for a stable, controlled, and efficient driving experience.",
-    partes: [
+    parts: [
        {
         title: "Shock Absorber",
         data: [
@@ -838,7 +837,7 @@ const CategoryData = [
     image: "https://storage.googleapis.com/spares/segment_icons/Fasteners.png",
     name: "Fasteners",
     data: "The Suspension is responsible for maintaining a smooth grip of the tyres on the road. It maximizes the friction for a stable, controlled, and efficient driving experience.",
-    partes: [
+    parts: [
        {
         title: "Shock Absorber",
         data: [
@@ -863,7 +862,7 @@ const CategoryData = [
       "https://storage.googleapis.com/spares/new_parts_images/service%20kit-01.svg",
     name: "Service Kit",
     data: "The Suspension is responsible for maintaining a smooth grip of the tyres on the road. It maximizes the friction for a stable, controlled, and efficient driving experience.",
-    partes: [
+    parts: [
        {
         title: "Shock Absorber",
         data: [

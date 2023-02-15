@@ -13,13 +13,13 @@ function HomeCards() {
                 src='images/img-11.png'
                 text='Explore the Parts AVTR from Ashok Leyland is transforming the business to next level'
                 label='Spares Catalog'
-                path='/services'
+                path='#'
               />
               <HomeItems
                 src='images/img-12.png'
                 text="Ashok Leyland, India's market leader in MHCV buses is the world's fourth largest bus manufacturer in terms of volume"
                 label='Buses'
-                path='/services'
+                path='#'
               />
             </ul>
             <ul className='cards__items'>
@@ -27,19 +27,19 @@ function HomeCards() {
                 src='images/img-13.png'
                 text='Ashok Leyland manufactures Defence vehicles '
                 label='Defence'
-                path='/services'
+                path='#'
               />
               <HomeItems
                 src='images/img-4.jpg'
                 text=' AVTR from Ashok Leyland is transforming the business to next level. '
                 label='Suspention'
-                path='/products'
+                path='#'
               />
               <HomeItems
                 src='images/img-8.jpeg'
                 text='AVTR from Ashok Leyland is transforming the business to next level. '
                 label='Body Parts'
-                path='/sign-up'
+                path='#'
               />
             </ul>
           </div>
