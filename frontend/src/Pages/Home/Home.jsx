@@ -9,7 +9,8 @@ const Home = () => {
     <HeroCarausel/>
     
     </>
-  )
+  )      
+  
 }
 
 export default Home;
