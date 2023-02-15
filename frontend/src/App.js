@@ -37,6 +37,7 @@ function App() {
     <Suspense fallback={<Loader />}>
       <Routes>
         {BasicRoutesConfig.map((route, key) => {
+          console.log(route)
           return route ? <Route key={key} {...route} /> : null;
         })}
 
