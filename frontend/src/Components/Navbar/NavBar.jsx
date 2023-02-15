@@ -1,7 +1,9 @@
 import React,{useState,useEffect} from 'react';
-import{Link} from 'react-router-dom';
 import { Button } from './Button';
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import './NavBar.css';
+import { deleteAuth } from '../../Reducer/authSlice';
 function NavBar() {
   const[click , setClick] = useState(false);
   const [button, setButton]= useState(true); 
@@ -16,10 +18,18 @@ function NavBar() {
       setButton(true);
     }
   }; 
+  let check = sessionStorage.getItem("loginToken");
+
 
   useEffect(() => {
     showButton();
   }, []);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const handleLogout=()=>{
+    dispatch(deleteAuth())
+    navigate("/");
+  }
 
   
 
@@ -43,7 +53,7 @@ function NavBar() {
                 </li>
                   <li className='nav-item'>
                     <Link to='/Services' className='nav-links' onClick={closeMobileMenu}>
-                      Services
+                      AboutUs
                     </Link>
                   </li>
                   <li className='nav-item'>
@@ -51,21 +61,30 @@ function NavBar() {
                       Products
                     </Link>
                   </li>
-                  <li className='nav-item'>
-                    <Link to='/Pro2' className='nav-links' onClick={closeMobileMenu}>
-                      Pro2
-                    </Link>
-                  </li>
-                  <li className='nav-item'>
-                    <Link to='/Signup' className='nav-links' onClick={closeMobileMenu}>
-                    {button && <Button buttonStyle='btn--outline'> SIGN  UP </Button>}
-                    </Link>
-                  </li>
-                  <li className='nav-item'>
+                  {
+                    check==null ? (
+                      <li className='nav-item'>
+                      <Link to='/Signup' className='nav-links' onClick={closeMobileMenu}>
+                      {button && <Button buttonStyle='btn--outline'> SIGN  UP </Button>}
+                      </Link>
+                    </li>
+                    ):null
+                  }
+                 {
+                  check===null ? (
+                    <li className='nav-item'>
                     <Link to='/Login' className='nav-links' onClick={closeMobileMenu}>
                     {button && <Button buttonStyle='btn--outline'> LOGIN </Button>}
                     </Link>
                   </li>
+                  ):(
+                    <li className='nav-item'>
+                    <Link to='/Login' className='nav-links' onClick={handleLogout}>
+                    {button && <Button buttonStyle='btn--outline'> LOGOUT </Button>}
+                    </Link>
+                  </li>
+                  )
+                 }
                 </ul>
             </div>
         </nav>

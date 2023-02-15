@@ -23,19 +23,29 @@ const loginFields=[
 
 const signupFields=[
     {
-        labelText:"Username",
-        labelFor:"username",
-        id:"username",
-        name:"username",
+        labelText:"Firstname",
+        labelFor:"firstName",
+        id:"firstName",
+        name:"firstName",
         type:"text",
-        autoComplete:"username",
+        autoComplete:"firstName",
         isRequired:true,
-        placeholder:"Username"   
+        placeholder:"firstName"   
+    },
+    {
+        labelText:"Lastname",
+        labelFor:"lastName",
+        id:"lastName",
+        name:"lastName",
+        type:"text",
+        autoComplete:"lastName",
+        isRequired:true,
+        placeholder:"lastName"   
     },
     {
         labelText:"Email address",
-        labelFor:"email-address",
-        id:"email-address",
+        labelFor:"email",
+        id:"email",
         name:"email",
         type:"email",
         autoComplete:"email",
