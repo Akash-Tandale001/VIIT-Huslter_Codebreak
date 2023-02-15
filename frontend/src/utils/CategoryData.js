@@ -1,3 +1,4 @@
+
 const CategoryData = [
   {
     image: "https://storage.googleapis.com/spares/spares/segment_icon/Body.png",
@@ -398,6 +399,7 @@ const CategoryData = [
   {
     image:"https://storage.googleapis.com/spares/spares/segment_icon/lights.png",
     name: "Lighting",
+    text: "Available at Closest stores",
     data:[
       {
         title:"Lighting",
@@ -431,6 +433,7 @@ const CategoryData = [
     image:
       "https://storage.googleapis.com/spares/spares/segment_icon/Suspension.png",
     name: "Suspension",
+    text: "Available at Closest stores",
     data: "The Suspension is responsible for maintaining a smooth grip of the tyres on the road. It maximizes the friction for a stable, controlled, and efficient driving experience.",
     partes: [
        {
@@ -455,6 +458,7 @@ const CategoryData = [
   {
     image: "https://storage.googleapis.com/spares/spares/segment_icon/Ac.png",
     name: "Air Conditioning",
+    text: "Available at Closest stores",
     data: "A car AC maintains the ambient temperature inside the car also reducing humidity while making the drive pleasurable and comfortable for you.",
     partes: [
        {
@@ -480,6 +484,7 @@ const CategoryData = [
     image:
       "https://storage.googleapis.com/spares/spares/segment_icon/Brakes.png",
     name: "Brake System",
+    text: "Available at Closest stores",
     data: "A Brake is a mechanical device that inhibits the car's motion by absorbing its energy and counteracting it with a frictional force.",
     partes: [
        {
@@ -505,6 +510,7 @@ const CategoryData = [
     image:
       "https://storage.googleapis.com/spares/spares/segment_icon/Engine.png",
     name: "Engine Parts",
+    text: "Available at Closest stores",
     data: "In the Engine, the combustion of fuel and air mixture takes place and the energy produced from combustion is converted into motion.",
     partes: [
        {
@@ -530,6 +536,7 @@ const CategoryData = [
     image:
       "https://storage.googleapis.com/spares/spares/segment_icon/Electronics.png",
     name: "Electrical",
+    text: "Available at Closest stores",
     data: "Electrical components cater to various electrical needs of a car such as battery, alternator, horn, indicator, sensor etc. All of these help improve a car's functionality.",
     partes: [
        {
@@ -555,6 +562,7 @@ const CategoryData = [
     image:
       "https://storage.googleapis.com/spares/spares/segment_icon/Steering.png",
     name: "Steering",
+    text: "Available at Closest stores",
     data: "Steering system controls the tyre's movement. It works by converting the rotation of the steering wheel into the swivelling movement of the tyres",
     partes: [
        {
