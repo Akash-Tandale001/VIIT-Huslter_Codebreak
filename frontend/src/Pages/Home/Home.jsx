@@ -1,5 +1,4 @@
 import React from 'react'
-
 import HeroCarausel from '../../Components/HeroSection/HeroCarausel'
 
 const Home = () => {
@@ -7,8 +6,10 @@ const Home = () => {
    
     <>
     <HeroCarausel/>
+    
     </>
-  )
+  )      
+  
 }
 
 export default Home;
