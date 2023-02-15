@@ -6,9 +6,9 @@ import Signup from '../SignIn/pages/SignUp'
 
 const Home = () => {
   return (
-    <div>
-      
-    </>
+   <>
+    
+   </>
   )
 }
 
