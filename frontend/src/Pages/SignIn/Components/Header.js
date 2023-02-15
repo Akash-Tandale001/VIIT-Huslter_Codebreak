@@ -4,7 +4,7 @@ export default function Header({
     heading,
     paragraph,
     linkName,
-    linkUrl="#"
+    linkUrl="/ResetPassword"
 }){
     return(
         <div className="mb-10">

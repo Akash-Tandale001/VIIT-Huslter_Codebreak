@@ -2,6 +2,9 @@ import React from 'react'
 const Home = React.lazy(() => import("../Pages/Home/Home.jsx"));
 const Login = React.lazy(() => import("../Pages/SignIn/pages/Login.js"));
 const Signup = React.lazy(() => import("../Pages/SignIn/pages/Signup.js"));
+const Categories = React.lazy(() => import("../Pages/Category/Category"));
+const ResetPassword = React.lazy(() => import("../Pages/SignIn/Components/ResetPassword.js"));
+const CategoryView= React.lazy(()=>import("../Pages/Category/CategoryView.jsx"))
 
 const components = {
 	Home: {
@@ -14,11 +17,16 @@ const components = {
 	// 	name: "abour",
 	// 	element: <About />,
 	// },
-	// Profile: {
-	// 	path: "/base/profile",
-	// 	name: "Profile",
-	// 	element: <Profile />,
-	// },
+	Categories: {
+		path: "/base/categories",
+		name: "categories",
+		element: <Categories />,
+	},
+    CategoriesView: {
+		path: "/base/categories/view/*",
+		name: "CategoriesView",
+		element: <CategoryView />,
+	},
 	// Cart: {
 	// 	path: "/base/cart",
 	// 	name: "cart",
@@ -30,11 +38,11 @@ const components = {
 		element: <Login />,
 	},
 
-	// ResetPassword: {
-	// 	path: "/reset-password",
-	// 	name: "ResetPassword",
-	// 	element: <ResetPassword />,
-	// },
+	ResetPassword: {
+		path: "/ResetPassword",
+		name: "ResetPassword",
+		element: <ResetPassword />,
+	},
     // AdminDashBoard: {
 	// 	path: "/base/AdminDashBoard",
 	// 	name: "AdminDashBoard",
@@ -42,7 +50,7 @@ const components = {
 	// },
 	SignUp: {
 		path: "/signup",
-		name: "SignUp",
+		name: "Signup",
 		element: <Signup />,
 	},
 	// PaymentSucess:{
@@ -66,7 +74,7 @@ const rolesConfig = {
 		routes: [
             components.Home,
 			// components.About,
-			// components.Profile,
+			components.Categories,
             // components.Cart,
 			// components.PaymentFail,
 			// components.PaymentSucess,
@@ -77,7 +85,9 @@ const BasicRoutesConfig = [
     components.Home,
 	// components.About,
 	components.Login,
-	// components.ResetPassword,
+	components.ResetPassword,
 	components.SignUp,
+    components.Categories,
+    components.CategoriesView
 ];
 export { rolesConfig, BasicRoutesConfig };
