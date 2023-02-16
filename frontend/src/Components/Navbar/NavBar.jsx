@@ -39,7 +39,7 @@ function NavBar() {
     <>
         <nav className='navbar'>
             <div className='navbar-container '>
-                <Link to='/' className='navbar-logo font-bold text-xl  '  onClick={closeMobileMenu}>
+                <Link to='/' className='navbar-logo font-bold   '  onClick={closeMobileMenu}>
                 Ashok<span className="text-blue-600"> LeyLand</span>  
                 </Link>
                 <div className='menu-icon' onClick={handleClick}>
