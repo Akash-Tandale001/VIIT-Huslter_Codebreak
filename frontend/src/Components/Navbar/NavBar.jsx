@@ -1,7 +1,9 @@
 import React,{useState,useEffect} from 'react';
-import{Link} from 'react-router-dom';
 import { Button } from './Button';
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import './NavBar.css';
+import { deleteAuth } from '../../Reducer/authSlice';
 function NavBar() {
   const[click , setClick] = useState(false);
   const [button, setButton]= useState(true); 
@@ -16,10 +18,18 @@ function NavBar() {
       setButton(true);
     }
   }; 
+  let check = sessionStorage.getItem("loginToken");
+
 
   useEffect(() => {
     showButton();
   }, []);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const handleLogout=()=>{
+    dispatch(deleteAuth())
+    navigate("/");
+  }
 
   
 
@@ -29,8 +39,8 @@ function NavBar() {
     <>
         <nav className='navbar'>
             <div className='navbar-container'>
-                <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-                    VIIT-Hustler <i className='fab fa-typo3'/>  
+                <Link to='/' className='navbar-logo font-extrabold text-xl '  onClick={closeMobileMenu}>
+                    Ashok LeyLand  
                 </Link>
                 <div className='menu-icon' onClick={handleClick}>
                 <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -41,31 +51,45 @@ function NavBar() {
                     Home
                   </Link>
                 </li>
-                  <li className='nav-item'>
-                    <Link to='/Services' className='nav-links' onClick={closeMobileMenu}>
-                      Services
+                {
+                  check!==null ? (
+                    <li className='nav-item'>
+                    <Link to='/base/categories' className='nav-links' onClick={closeMobileMenu}>
+                      Category
                     </Link>
                   </li>
+                  ):null
+                }
+                  
                   <li className='nav-item'>
-                    <Link to='/Products' className='nav-links' onClick={closeMobileMenu}>
-                      Products
+                    <Link to='/about' className='nav-links' onClick={closeMobileMenu}>
+                    About Us
                     </Link>
                   </li>
-                  <li className='nav-item'>
-                    <Link to='/Pro2' className='nav-links' onClick={closeMobileMenu}>
-                      Pro2
-                    </Link>
-                  </li>
-                  <li className='nav-item'>
-                    <Link to='/Signup' className='nav-links' onClick={closeMobileMenu}>
-                    {button && <Button buttonStyle='btn--outline'> SIGN  UP </Button>}
-                    </Link>
-                  </li>
-                  <li className='nav-item'>
+                  {
+                    check==null ? (
+                      <li className='nav-item'>
+                      <Link to='/Signup' className='nav-links' onClick={closeMobileMenu}>
+                      {button && <Button buttonStyle='btn--outline'> SIGN  UP </Button>}
+                      </Link>
+                    </li>
+                    ):null
+                  }
+                 {
+                  check===null ? (
+                    <li className='nav-item'>
                     <Link to='/Login' className='nav-links' onClick={closeMobileMenu}>
                     {button && <Button buttonStyle='btn--outline'> LOGIN </Button>}
                     </Link>
                   </li>
+                  ):(
+                    <li className='nav-item'>
+                    <Link to='/Login' className='nav-links' onClick={handleLogout}>
+                    {button && <Button buttonStyle='btn--outline'> LOGOUT </Button>}
+                    </Link>
+                  </li>
+                  )
+                 }
                 </ul>
             </div>
         </nav>
