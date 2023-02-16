@@ -26,16 +26,27 @@ const Card2 = ({
     navigate(`view/${name.replace(/\s+/g, "")}`);
   };
   const handaleClick=()=>{
-    
+    const cartListItem = sessionStorage.getItem("cartList")
+        ? JSON.parse(sessionStorage.getItem("cartList"))
+        : [{}];
+        cartListItem.push({
+          image,
+          name,
+          price,
+          brand,
+          rank,
+        })
+        console.log(cartListItem)
+        sessionStorage.setItem("cartList", JSON.stringify(cartListItem))
   }
   return (
     <div className="shadow-lg rounded-lg">
-      <Link
+      {/* <Link
         to={{
           pathname: `view/${name.replace(/\s+/g, "")}`,
           state: { data: data },
         }}
-      >
+      > */}
         <div className="card w-full bg-base-100  image-full cursor-pointer">
           <figure className="flex justify-center">
             <img src={image} alt="#" className="w-18 items-center" />
@@ -62,7 +73,7 @@ const Card2 = ({
             </h3>
           </div>
         </div>
-      </Link>
+      {/* </Link> */}
     </div>
   );
 };

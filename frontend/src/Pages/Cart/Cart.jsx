@@ -1,8 +1,15 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import Card2 from "../../Components/CategoriesCard/Card2";
+import Card3 from "../../Components/CategoriesCard/Card3";
 
 const Cart = () => {
     const [list, setList] = useState([])
+    useEffect(() => {
+        setList(JSON.parse(sessionStorage.getItem("cartList")))
+    }, [])
+    
+    console.log(list)
     const checkout = async () => {
         const res = await axios.post(
           "https://ecommerceserver-ten.vercel.app/api/auth/create-checkout-session",
@@ -39,6 +46,13 @@ const Cart = () => {
           <span>Checkout</span>
         </button>
         </div>
+      </div>
+      <div className="grid lg:grid-cols-5 gap-3 p-8 gap-y-12 hover:bg-white bg-gray-300">
+      {
+        list?.map(item=>(
+            <Card3 image={item.image} name={item.name} brand={item.brand} price={item.price} rank={item.rank} />
+        ))
+      }
       </div>
     </div>
   );
