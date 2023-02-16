@@ -5,7 +5,17 @@ import './HomeCard.css'
 function HomeCards() {
     return (
       <div className='cards'>
-        <h1>Koi Manzil Dur Nahi!!</h1>
+        <div className='marquee'>
+        <div className='marqueeContentContainer'>
+          <h1> Koi Manzil Dur Nahi!! </h1>
+          <h1> We Focus On
+          Safety First
+          and forever!! </h1>
+          <h1> Enhancing Lives Through Mobility!! </h1>
+          
+        </div>
+        
+        </div>
         <div className='cards__container'>
           <div className='cards__wrapper'>
             <ul className='cards__items'>

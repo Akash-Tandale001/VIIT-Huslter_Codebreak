@@ -5,32 +5,32 @@ import "react-alice-carousel/lib/alice-carousel.css";
 const handleDragStart = (e) => e.preventDefault();
 const items = [
   <img
-    src="https://source.unsplash.com/random"
-    style={{ width: "100%", height: "320px", objectFit: "cover" }}
+    src='images/img-19.jpg'
+    style={{ width: "100%", height: "600px", objectFit: "cover" }}
     alt="..."
     onDragStart={handleDragStart}
   />,
   <img
-    src="https://source.unsplash.com/random"
-    style={{ width: "100%", height: "320px", objectFit: "cover" }}
+    src='images/img-17.jpg'
+    style={{ width: "100%", height: "600px", objectFit: "cover" }}
     alt="..."
     onDragStart={handleDragStart}
   />,
   <img
-    src="https://source.unsplash.com/random"
-    style={{ width: "100%", height: "320px", objectFit: "cover" }}
+    src='images/img-14.png'
+    style={{ width: "100%", height: "600px", objectFit: "cover" }}
     alt="..."
     onDragStart={handleDragStart}
   />,
   <img
-    src="https://source.unsplash.com/random"
-    style={{ width: "100%", height: "320px", objectFit: "cover" }}
+    src='images/img-18.jpg'
+    style={{ width: "100%", height: "600px", objectFit: "cover" }}
     alt="..."
     onDragStart={handleDragStart}
   />,
   <img
-    src="https://source.unsplash.com/random"
-    style={{ width: "100%", height: "320px", objectFit: "cover" }}
+    src='images/img-21.jpg'
+    style={{ width: "100%", height: "600px", objectFit: "cover" }}
     alt="..."
     onDragStart={handleDragStart}
   />,
@@ -38,7 +38,7 @@ const items = [
 
 const HeroCarausel = () => {
   return (
-    <div style={{ width: "100%", height: "350px", objectFit: "cover" }}>
+    <div style={{ width: "100%", height: "620px", objectFit: "cover" }}>
       <AliceCarousel
         infinite
         disableDotsControls
