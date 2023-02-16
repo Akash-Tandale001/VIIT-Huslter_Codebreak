@@ -8,6 +8,7 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { authDetails, saveAuth } from "../../../Reducer/authSlice";
 import Loader from '../../../helper/Loader';
+
 const fields=loginFields;
 let fieldsState = {};
 fields.forEach(field=>fieldsState[field.id]='');
