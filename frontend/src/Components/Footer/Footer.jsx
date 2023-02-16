@@ -79,11 +79,6 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center text-center  p-5 bg-gray-50">
-        <h1 className=" text-gray-800 font-semibold">
-          © 2022-2023 All Rights Reserved
-        </h1>
-      </div>
     </>
   );
 };

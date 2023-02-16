@@ -35,52 +35,40 @@ function NavBar() {
   return (
     <>
       <nav className="navbar">
-        <div className="navbar-container">
+        <div className="navbar-container ">
           <Link
             to="/"
-            className="navbar-logo font-extrabold text-xl "
+            className="navbar-logo font-bold text-xl  "
             onClick={closeMobileMenu}
           >
-            Ashok LeyLand
+            Ashok<span className="text-blue-600"> LeyLand</span>
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
-              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+              <Link to="/" className="nav-links " onClick={closeMobileMenu}>
                 Home
               </Link>
             </li>
+            {check !== null ? (
+              <li className="nav-item">
+                <Link
+                  to="/base/categories"
+                  className="nav-links"
+                  onClick={closeMobileMenu}
+                >
+                  Category
+                </Link>
+              </li>
+            ) : null}
+
             <li className="nav-item">
               <Link to="/about" className="nav-links" onClick={closeMobileMenu}>
                 About Us
               </Link>
             </li>
-
-            {check !== null ? (
-              <>
-                <li className="nav-item">
-                  <Link
-                    to="/base/categories"
-                    className="nav-links"
-                    onClick={closeMobileMenu}
-                  >
-                    Category
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    to="/base/cart"
-                    className="nav-links"
-                    onClick={closeMobileMenu}
-                  >
-                    Cart
-                  </Link>
-                </li>
-              </>
-            ) : null}
-
             {check == null ? (
               <li className="nav-item">
                 <Link
