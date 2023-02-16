@@ -12,7 +12,7 @@ const Cart = () => {
     console.log(list)
     const checkout = async () => {
         const res = await axios.post(
-          "https://viit-huslter-codebreak.vercel.app/api/auth/create-checkout-session",
+          "https://ecommerceserver-ten.vercel.app/api/auth/create-checkout-session",
           { userName: sessionStorage.getItem("userName"), list }
         );
         if (res.data.url) {
