@@ -13,9 +13,9 @@ const Card = ({ image, name ,data, text}) => {
     <div className='shadow-lg rounded-lg '>
       <Link
         to={{
-          pathname: text==="Available at Closest stores" ? `view/${name.replace(/\s+/g, "")}`:``,
-          state: { data:data },
+          pathname: text==="Available at Closest stores" ? `view/${name.replace(/\s+/g, "")}`:``          
         }}
+        state={{title:name}}
       >
         <div className="card w-full bg-base-100  image-full cursor-pointer">
           <figure className="flex justify-center">
