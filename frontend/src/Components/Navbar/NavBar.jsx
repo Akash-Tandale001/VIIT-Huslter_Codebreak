@@ -52,23 +52,35 @@ function NavBar() {
                 Home
               </Link>
             </li>
-            {check !== null ? (
-              <li className="nav-item">
-                <Link
-                  to="/base/categories"
-                  className="nav-links"
-                  onClick={closeMobileMenu}
-                >
-                  Category
-                </Link>
-              </li>
-            ) : null}
-
             <li className="nav-item">
               <Link to="/about" className="nav-links" onClick={closeMobileMenu}>
                 About Us
               </Link>
             </li>
+            {check !== null ? (
+              <>
+                <li className="nav-item">
+                  <Link
+                    to="/base/categories"
+                    className="nav-links"
+                    onClick={closeMobileMenu}
+                  >
+                    Category
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    to="/base/cart"
+                    className="nav-links"
+                    onClick={closeMobileMenu}
+                  >
+                    Cart
+                  </Link>
+                </li>
+              </>
+            ) : null}
+
+            
             {check == null ? (
               <li className="nav-item">
                 <Link
