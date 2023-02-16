@@ -10,6 +10,7 @@ const Card3 = ({
   rank,
 }) => {
   return (
+    <>
     <div className="shadow-lg rounded-lg">
         <div className="card w-full bg-base-100  image-full cursor-pointer">
           <figure className="flex justify-center">
@@ -26,10 +27,13 @@ const Card3 = ({
             <h2 className="card-title text-left text-orange-600 pt-4">
               {brand}
             </h2>
-
+            <button className="bg-red-800   text-white  py-2 px-2 rounded "  >
+                Remove
+              </button>
           </div>
         </div>
     </div>
+    </>
   );
 };
 
