@@ -1,6 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Card2 = ({
   image,
@@ -26,6 +28,9 @@ const Card2 = ({
     navigate(`view/${name.replace(/\s+/g, "")}`);
   };
   const handaleClick=()=>{
+    toast.success('Added to Cart ', {
+      position: toast.POSITION.TOP_RIGHT
+  });
     const cartListItem = sessionStorage.getItem("cartList")
         ? JSON.parse(sessionStorage.getItem("cartList"))
         : [{}];
@@ -63,6 +68,7 @@ const Card2 = ({
               <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded " onClick={handaleClick}>
                 Add To Cart
               </button>
+              <ToastContainer/>
             </div>
             <h2 className="card-title text-left text-orange-600 pt-4">
               {brand}
