@@ -18,23 +18,5 @@ If the user is not authenticated, the user is redirected to the homepage with th
 [CodeBreak 4.0 hackthon PS.pptx](https://github.com/Akash-Tandale001/VIIT-Huslter_Codebreak/files/10751899/CodeBreak.4.0.hackthon.PS.pptx)
 
 Tree Structure of Frontend Folder src file:
-├───Components
-│   ├───CategoriesCard
-│   ├───Footer
-│   ├───HeroSection
-│   ├───HomePage
-│   ├───layout
-│   └───Navbar
-├───helper
-├───Pages
-│   ├───Category
-│   ├───Home
-│   └───SignIn
-│       ├───Components
-│       ├───Constants
-│       └───pages
-├───Reducer
-├───Routes
-└───utils
 
-
+![tree](https://user-images.githubusercontent.com/76769985/219262659-374451de-afc1-4e53-834a-af37febdf76e.png)
