@@ -95,6 +95,7 @@ const BasicRoutesConfig = [
 	components.ResetPassword,
 	components.SignUp,
     components.Categories,
-    components.CategoriesView
+    components.CategoriesView,
+	
 ];
 export { rolesConfig, BasicRoutesConfig };
