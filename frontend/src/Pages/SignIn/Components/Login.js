@@ -33,7 +33,7 @@ export default function Login(){
         try {
             setLoading(true);
             const loginstatus = await axios.post(
-              "https://viit-huslter-codebreak.vercel.app/api/auth/login",
+              "https://viit-huslter-codebreak-orpin.vercel.app/api/auth/login",
               loginState
             );
       
