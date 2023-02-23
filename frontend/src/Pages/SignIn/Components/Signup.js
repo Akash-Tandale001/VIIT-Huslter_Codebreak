@@ -28,7 +28,7 @@ export default function Signup(){
     try {
       setLoading(true);
       const loginstatus = await axios.post(
-        "https://viit-huslter-codebreak.vercel.app/api/auth/createUser",
+        "https://viit-huslter-codebreak-orpin.vercel.app/api/auth/createUser",
         signupState
       );
       if(loginstatus.data.status === "success"){
